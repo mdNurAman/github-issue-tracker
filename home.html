@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Github Issue Tracker</title>
+        <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css">
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+            integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        >
+    </head>
+    <body class="font-serif bg-gray-100 m-0 pt-8">
+        <section class="w-11/12 mx-auto  shadow-2xl rounded-md">
+            <!-- Buttons -->
+            <div class="p-6 shadow-md bg-white">
+                <button id="all" class="btn w-[100px] btn-primary">All</button>
+                <button id="open" class="btn w-[100px] mx-4">Open</button>
+                <button id="closed" class="btn w-[100px] ">Closed</button>
+            </div>
+            <!-- Issues Header -->
+            <section class="issue-header bg-white flex justify-between items-center shadow-md mt-10 px-4 rounded-md">
+                <div class="left py-6">
+                    <div class="flex gap-6 items-center">
+                        <div class="bg-gray-200 rounded-full p-2">
+                            <img class="w-10 h-full" src="assets/Aperture.png" alt="">
+                        </div>
+                        <div>
+                            <h2 id="issue-counter" class="text-lg font-bold"> Issues</h2>
+                            <p>Track and manage your issues</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="right flex gap-8 text-lg font-semibold">
+                    <div>
+                        <p>
+                            <span class="inline-block w-3 h-3 bg-green-700 rounded-full mx-2"></span>
+                            Open
+                        </p>
+                    </div>
+                    <div>
+                        <p>
+                            <span class="inline-block w-3 h-3 bg-violet-700 rounded-full mx-2"></span>
+                            Closed
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <!-- issues table -->
+            <section id="issue-container" class="issues-table grid grid-cols-4 gap-3 m-6"></section>
+        </section>
+<!-- modal   -->
+ <!-- Open the modal using ID.showModal() method -->
+<dialog id="my_modal" class="modal">
+  <div  class="modal-box">
+    <div id="modal-container"></div>
+    <div class="modal-action">
+      <form method="dialog">
+        <!-- if there is a button in form, it will close the modal -->
+                <button class="btn">Close</button>
+      </form>
+    </div>
+  </div>
+</dialog>
+       <section class="bg-white p-6">
+         <section class="footer flex justify-between items-center w-19/20 mx-auto">
+          <div class="left flex items-center">
+            <img class="w-10" src="assets/github-logo.png" alt="">
+          <h1 class="font-bold text-2xl">Github Issue Tracker</h1>
+          </div>
+          <div class="right flex items-center">
+            <input id="search-input" class="p-[10px] rounded-sm w-[250px]" type="text" name="" id="" placeholder="Search issues"> 
+            <button id="search" class="btn btn-primary">Search</button>
+          </div>
+        </section>
+       </section>
+        <script src="scripts/home.js"></script>
+    </body>
+</html>

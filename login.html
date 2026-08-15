@@ -4,8 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Github Issues Tracker</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body>
-    
+    <div class="login-container w-3/5 mx-auto my-auto p-6 shadow-xl">
+        <div class="upper flex flex-col items-center justify-center p-6">
+            <img src="assets/github-logo.png" alt="Github Logo" class="w-30 mb-4">
+            <h1 class="text-3xl font-bold">Github Issues Tracker</h1>
+            <p class="text-lg text-gray-600">Sign in to manage your issues</p>
+        </div>
+        <div class="middle border-b-1 border-gray-200 pb-8">
+            <form class="">
+                <legend class="my-2 font-semibold">Username</legend>
+                <input id="username" type="text" placeholder="Enter Username" class="text-lg input input-bordered w-full">
+                <legend class="my-2 font-semibold">Password</legend>
+                <input id="password" type="password" placeholder="Enter Password" class="text-lg input input-bordered w-full">
+                <button id="login-button" type="button" class="text-xl btn btn-primary mt-4 w-full p-6">Sign In</button>
+            </form>
+        </div>
+        <div class="lower relative">
+            <div class="text-lg font-semibold text-center text-gray-600 absolute top-[-15px] left-[50%] bg-white">OR</div>
+            <p class="text-lg font-semibold text-center text-gray-600 p-2 pt-8">Demo Credentials:</p>
+            <div class="bg-gray-200 flex flex-col items-center justify-center p-6 text-xl rounded-lg">
+                <p><span class="font-semibold">Username:</span> admin</p>
+                <p><span class="font-semibold">Password:</span> admin123</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts/login.js"></script>
 </body>
 </html>
